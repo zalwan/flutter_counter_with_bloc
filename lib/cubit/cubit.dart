@@ -14,6 +14,7 @@ class CounterCubit extends Cubit<int> {
     if (state > 0) {
       emit(state - 1);
     } else {
+      Error();
       emit(0);
       showDialog(
         context: context,
@@ -33,6 +34,20 @@ class CounterCubit extends Cubit<int> {
         },
       );
     }
+  }
+
+  // fitur bloc untuk memantau data  (observer data)
+  @override
+  void onChange(Change<int> change) {
+    super.onChange(change);
+    print(change);
+  }
+
+  // fitur bloc untuk memantau error  (observer error)
+  @override
+  void onError(Object error, StackTrace stackTrace) {
+    super.onError(error, stackTrace);
+    print(error);
   }
 }
 
