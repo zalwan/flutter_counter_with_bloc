@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_bloc/bloc_builder/bloc_builder.dart';
 import 'package:flutter_application_bloc/cubit/cubit.dart';
 //import 'package:flutter_application_bloc/stream/stream.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: CubitPage(),
+      home: BlocBuilderPage(),
     );
   }
 }
